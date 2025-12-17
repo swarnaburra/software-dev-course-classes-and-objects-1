@@ -2,6 +2,8 @@ package org.example;
 
 import java.util.Scanner;
 
+import static org.example.Calculator.*;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -19,10 +21,12 @@ public class Main {
         int product = 0;
         int quotient = 0;
 
-        System.out.println("The sum is " + sum);
-        System.out.println("The difference is " + difference);
-        System.out.println("The product is " + product);
-        System.out.println("The quotient is " + quotient);
+        System.out.println("The sum is " + add(3,5));
+        System.out.println("The difference is " + difference(7, 5));
+        System.out.println("The product is " + product(3,3));
+        System.out.println("The quotient is " + divide(6, 2));
     }
+
+
 
 }

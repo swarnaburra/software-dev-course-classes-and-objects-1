@@ -12,16 +12,16 @@ public class CalculatorTests {
 
     @Test
     public void testSubtract() {
-        assert Calculator.subtract(1, 2) == -1;
-        assert Calculator.subtract(0, 0) == 0;
-        assert Calculator.subtract(-1, -1) == 0;
+        assert Calculator.difference(1, 2) == -1;
+        assert Calculator.difference(0, 0) == 0;
+        assert Calculator.difference(-1, -1) == 0;
     }
 
     @Test
     public void testMultiply() {
-        assert Calculator.multiply(1, 2) == 2;
-        assert Calculator.multiply(0, 0) == 0;
-        assert Calculator.multiply(-1, -1) == 1;
+        assert Calculator.product(1, 2) == 2;
+        assert Calculator.product(0, 0) == 0;
+        assert Calculator.product(-1, -1) == 1;
     }
 
     @Test
