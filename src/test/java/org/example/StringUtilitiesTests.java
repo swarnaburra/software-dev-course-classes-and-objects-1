@@ -29,10 +29,21 @@ public class StringUtilitiesTests {
     }
 
     @Test
+    public void testCensorAsparagusUpperCase() {
+        Assert.assertEquals("ASPARAGUS", StringUtilities.censorAsparagus("ASPARAGUS"));
+    }
+
+    @Test
     public void testBigger() {
         Assert.assertEquals("apple", StringUtilities.bigger("test", "apple"));
         Assert.assertEquals("banana", StringUtilities.bigger("apple", "banana"));
         Assert.assertEquals("cherry", StringUtilities.bigger("cherry", "banana"));
         Assert.assertEquals("cherry", StringUtilities.bigger("cherry", "cherry"));
     }
+
+    @Test
+    public void testBiggerEdgeCaseEmptyString(){
+        Assert.assertEquals("", StringUtilities.bigger("", ""));
+    }
+
 }
