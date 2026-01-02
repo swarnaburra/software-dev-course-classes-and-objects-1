@@ -8,8 +8,14 @@ public class CalculatorTests {
         assert Calculator.add(1, 2) == 3;
         assert Calculator.add(0, 0) == 0;
         assert Calculator.add(-1, -1) == -2;
+
     }
 
+@Test
+public void testAddEdgeCase(){
+        assert Calculator.add(Integer.MAX_VALUE, Integer.MAX_VALUE) == -2;
+
+}
     @Test
     public void testSubtract() {
         assert Calculator.difference(1, 2) == -1;
@@ -30,4 +36,12 @@ public class CalculatorTests {
         assert Calculator.divide(0, 1) == 0;
         assert Calculator.divide(-1, -1) == 1;
     }
+
+    @Test(expected = ArithmeticException.class)
+    public void testDivideByZero() {
+        Calculator.divide(8, 0);
+
+    }
+
 }
+
